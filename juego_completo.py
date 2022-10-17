@@ -114,8 +114,9 @@ def desea_jugar(invite):
     else:
         return False 
 
-import pickle
-from tabulate import tabulate
+import pickle #Crear una lista de valores persistentes
+
+from tabulate import tabulate #Crear tabla
 
 #funcion responsable de cada juego
 def jugar_partida():
