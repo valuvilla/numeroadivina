@@ -161,7 +161,7 @@ def opciones():
         MAX2=1000
         minimo=MIN
         maximo=MAX2
-        intento_maximo=8
+        intento_maximo=15
         
 
     elif opcion=="3":
@@ -169,7 +169,7 @@ def opciones():
         MAX3=10**6
         minimo=MIN
         maximo=MAX3 
-        intento_maximo=6
+        intento_maximo=20
         
          
     else:
@@ -177,9 +177,9 @@ def opciones():
         MAX4=10**12 
         minimo=MIN
         maximo=MAX4  
-        intento_maximo=4
+        intento_maximo=25
         
     
     return minimo, maximo, intento_maximo
-    
+
 print(jugar())
