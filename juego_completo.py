@@ -74,9 +74,7 @@ def solicitar_intento(minimo, maximo, intento_maximo):
             minimo<=dato<=maximo
         except:
             print("Fuera el intervalo", file=sys.stderr)
-            pass
         else:
-            print("N")
             break
             sys.exit()
     
