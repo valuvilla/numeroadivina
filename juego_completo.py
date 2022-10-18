@@ -73,10 +73,11 @@ def solicitar_intento(minimo, maximo, intento_maximo):
         try:
             minimo<=dato<=maximo
         except:
-            print("{} no está entre {} y {}".format(dato,minimo,maximo))
+            print("Fuera el intervalo", file=sys.stderr)
             pass
         else:
-            break 
+            print("N")
+            break
             sys.exit()
     
     return dato       
@@ -121,7 +122,7 @@ from tabulate import tabulate #Crear tabla
 #funcion responsable de cada juego
 def jugar_partida():
     usuario=input("Usuario: ")
-    tabla=[["Usuario","Intentos"]]
+    tabla=[["Usuario","Intentos", "Victoria"]]
 
     while True:
 
@@ -133,7 +134,7 @@ def jugar_partida():
         victoria, minimo, maximo, n_intentos, intento_maximo = adivina_numero()
 
         #Intento de crear una tabla con los intentos
-        tabla.append([usuario, n_intentos])
+        tabla.append([usuario, n_intentos, victoria])
     
 
         ArchivoBinario=open("ArchivoLista", "wb")
