@@ -64,19 +64,17 @@ def pedir_numero():
 def solicitar_intento(minimo, maximo, intento_maximo):
     invitacion="Adivine un número"
     while True:
-        #nucle infinito 
+        #bucle infinito 
 
 
         invitacion= "{} entre {} y {} incluídos. Tiene como maximo {} intentos".format(invitacion, minimo, maximo, intento_maximo)
         print(invitacion)
         dato= pedir_numero()
-        try:
-            minimo<=dato<=maximo
-        except:
-            print("Fuera el intervalo", file=sys.stderr)
-        else:
+        if minimo<=dato<=maximo:
             break
-            sys.exit()
+        else:
+            print("Fuera el intervalo")
+            break
     
     return dato       
 
