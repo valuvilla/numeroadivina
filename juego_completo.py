@@ -62,21 +62,17 @@ def pedir_numero():
 
 #Funcion para evaluar  que el numero dado por pantalla esta en el rango dado
 def solicitar_intento(minimo, maximo, intento_maximo):
-    invitacion="Adivine un número"
-    while True:
-        #bucle infinito 
 
-
-        invitacion= "{} entre {} y {} incluídos. Tiene como maximo {} intentos".format(invitacion, minimo, maximo, intento_maximo)
+        invitacion="Adivine un número"
+        invitacion = "{} entre {} y {} incluídos. Tiene como maximo {} intentos".format(invitacion, minimo, maximo, intento_maximo)
         print(invitacion)
         dato= pedir_numero()
         if minimo<=dato<=maximo:
-            break
+            return dato
         else:
             print("Fuera el intervalo")
-            break
-    
-    return dato       
+            return dato
+
 
 """"
 def IA(minimo, maximo, intento_maximo):
